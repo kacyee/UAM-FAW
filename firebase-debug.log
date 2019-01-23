@@ -1,0 +1,25 @@
+[debug] [2019-01-22T15:06:24.687Z] ----------------------------------------------------------------------
+[debug] [2019-01-22T15:06:24.689Z] Command:       E:\programs\node\node.exe C:\Users\patryk\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-01-22T15:06:24.690Z] CLI Version:   6.3.0
+[debug] [2019-01-22T15:06:24.690Z] Platform:      win32
+[debug] [2019-01-22T15:06:24.690Z] Node Version:  v10.14.2
+[debug] [2019-01-22T15:06:24.691Z] Time:          Tue Jan 22 2019 16:06:24 GMT+0100 (GMT+01:00)
+[debug] [2019-01-22T15:06:24.691Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-01-22T15:06:24.701Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-01-22T15:06:24.701Z] > authorizing via signed-in user
+[debug] [2019-01-22T15:06:24.702Z] [iam] checking project fawapplication for permissions ["firebase.projects.get"]
+[debug] [2019-01-22T15:06:24.703Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/fawapplication:testIamPermissions  
+
+[debug] [2019-01-22T15:06:25.639Z] <<< HTTP RESPONSE 200
+[debug] [2019-01-22T15:06:25.645Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/fawapplication  
+ 
+[debug] [2019-01-22T15:06:26.504Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'E:\studia\fawApp'...
+[info] 
+[debug] [2019-01-22T15:06:26.506Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/55801334818/clients/_:getWebAppConfig  
+ 
+[debug] [2019-01-22T15:06:27.042Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: dist
+[info] +  hosting: Local server: http://localhost:5000

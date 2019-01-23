@@ -1,0 +1,53 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Videos List</h1>
+  <!-- It won't show if there is no video -->
+  <a routerLink="/register-video" class="btn btn-success" *ngIf="hideWhenNoVideo">
+    <i class="fas fa-plus custom-fa-plus"></i>
+    Add Video
+  </a>
+</div>
+
+<div class="pricing-header mx-auto">
+
+  <!-- Preloader shows before the data loads-->
+  <div class="no-data text-center" *ngIf="preLoader">
+    <img src="assets/preloader.gif" class="preloader-icon" alt="No video">
+  </div>
+
+  
+  <div class="no-data text-center" *ngIf="noData">
+    <img src="assets/sadmeme.jpg" />
+    <p class="nodata-msg">No videos added yet!</p>
+    <a routerLink="/register-video" class="btn btn-success">
+      <i class="fas fa-plus custom-fa-plus"></i>
+      Add video
+    </a>
+  </div>
+
+  <!-- Showing students data -->
+  <div class="table-responsive" *ngIf="hideWhenNoVideo">
+    <table class="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg">
+      <thead>
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Author</th>
+          <th scope="col">Genre</th>
+          <th scope="col">Year</th>
+          <th class="text-center" scope="col">Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+       
+        <tr *ngFor="let video of Video; let i = index;">
+          <th scope="row">{{video.title}}</th>
+          <td>{{video.author}}</td>
+          <td>{{video.genre}}</td>
+          <td>{{video.year}}</td>
+          <td class="text-center action-block">
+            <!-- routerLink="/edit-video/{{video.$key}}" is refered to { path: 'edit-video/:id', component: EditVideoComponent } in app-routing.moudles.ts -->
+            <i class="far fa-edit" routerLink="/edit-video/{{video.$key}}"></i>
+            <i class="far fa-trash-alt" (click)="deleteVideo(video)"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
